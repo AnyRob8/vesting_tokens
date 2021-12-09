@@ -1,15 +1,28 @@
-# Basic Sample Hardhat Project
+# Vesting
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is a vesting smart contract. It is used to manage vesting for multiple addresses in one instance of the smart contract. There will be mutiple target addresses who will be associated to their slice of vesting (in %).
 
-Try running some of the following tasks:
+# Getting Started
+Install `direnv` module.
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+We use [direnv](https://direnv.net/) to manage environment variables.  You'll likely need to install it.
+
+```sh
+cp .envrc.example .envrc
+```
+
+# Setup
+```.sh
+yarn
+```
+
+# Test
+```.sh
+yarn test
+```
+
+# Deploy
+Configure parameters in [deploy/deploy.js](https://github.com/AnyRob8/vesting_tokens/blob/main/deploy/deploy.js) before deployment.
+```.sh
+yarn deploy <network>
 ```
